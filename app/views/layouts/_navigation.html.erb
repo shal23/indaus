@@ -7,22 +7,26 @@
     </ul>
     <ul class="nav pull-right">
 
-       <li>
-          <%= link_to "Contact",  new_enquiry_path %>
-      </li>
-      <li>
-        <%= link_to "Gallery", gallery_path %>
-      </li>
-      <li>
-        <%= link_to "Sponsors", sponsors_path %>
-      </li>
       <li>
         <%= link_to "Mission", mission_index_path %>
       </li>
+
+      <li>
+        <%= link_to "Sponsors", sponsors_path %>
+      </li>
+
+      <li>
+        <%= link_to "Gallery", gallery_path %>
+      </li>
+
+       <li>
+          <%= link_to "Contact",  new_enquiry_path %>
+      </li>
+      <li><%= link_to 'Login', new_user_session_path %></li>
     <% if user_signed_in? %>
       <% if current_user.has_role? :admin %>
         <li><%= link_to 'Edit account', edit_user_registration_path %></li>
-        <li><%= link_to 'Login', new_user_session_path %></li>
+       <!-- <li><%= link_to 'Login', new_user_session_path %></li>-->
         <li><%= link_to 'Admin', users_path %></li>
         <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
       <% end %>
