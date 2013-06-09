@@ -1,4 +1,111 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<div id="myCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+    <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item"><%= image_tag "INDAUS1_new.jpg" %>
+            </div>
+            <div class="item"><%= image_tag "INDAUS3_new.jpg" %></div>
+        </div>
+    <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+<hr>
+<div class = "pull-right">
+        <div class = "span4">
+            <center><h3><p aligh="justify">Our Upcoming Event</p></h3></center>
+            <br>
+                <%= image_tag "flyer1.png" %>
+                
+        </div>
+    </div>
+<div class="container">
+    <div class = "pull-left">
+        <div class = "span6">
+            <br>
+            <h3>About Us</h3>
+            <br>
+                <p align="justify">Indian Australian Association of NSW Inc. is the leading Indian Australian community association focused on the Indian community in New South Wales. We are a ‘young’ association, both in time span and also the age of core committee members, but we are very rich on the combined experience in community work. We are outcome focused and are driven to bring a paradigm shift in the leadership quality and motivation behind the formation and working of Indian associations. Our core belief is in “service with integrity”. We are involved in organizing and promoting Indian cultural events, public seminars around health etc., charity fund raising and taking up issues affecting the community with Govt. officials and media.</p> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3>Organising Committee</h3>
+            <table class="table table-striped">
+                <tbody>
+                    <tr class="title-tr">
+                        <td align="center" valign="middle"><b>Name</b></td>
+                        <td align="center" valign="middle"><b>Position</b></td>
+                        <td align="center" valign="middle">Phone no.</td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Dr. Yadu Singh</td>
+                        <td>President</td>
+                        <td>0413 375 669</td>
+                    </tr>
+                    <tr>
+                        <td>Stanley D'Cruz</td>
+                        <td>Vice President</td>
+                        <td>0412 922 179</td>
+                    </tr>
+                    <tr>
+                        <td>Gurdeep Singh</td>
+                        <td>Vice President</td>
+                        <td>0417 044 928</td>
+                    </tr>
+                    <tr>
+                        <td>Anagan Babu</td>
+                        <td>Secretary</td>
+                        <td>0402 229 517</td>
+                    </tr>
+                    <tr>
+                        <td>Anil Sharma</td>
+                        <td>Treasurer</td>
+                        <td>0415 821 794</td>
+                    </tr>
+                    <tr>
+                        <td>Gaurav Nirwal</td>
+                        <td>Joint Secretary</td>
+                        <td>0481 369 469</td>
+                    </tr>
+                    <tr>
+                        <td>Vinod Reddy Elete</td>
+                        <td>Joint Treasurer</td>
+                        <td>0469 907 958</td>
+                    </tr>
+                <tbody>      
+            </table>
+            <br>
+            <hr>
+            <br>
+            
+            <h3>Our Sponsors</h3>
+            <div id="logo">
+                <img src="http://www.krivaan.com/wp-content/uploads/2012/07/Krivaan156x74.png" width="156" height="52" alt="Krivaan" />
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h3>Our Media Partners</h3>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+        <center><a href="https://www.facebook.com/INDAUS.NSW" target="_blank">
+            <i class="icon-facebook"></i> Facebook
+        </a> &nbsp;
+
+        <a href="https://www.twitter.com/INDAUS.NSW" target="_blank">
+            <i class="icon-twitter"></i> Twitter
+        </a></center> &nbsp;
+<br>
+<hr>
+<br>
+<br>

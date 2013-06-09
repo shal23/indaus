@@ -1,0 +1,23 @@
+<h3>Our Sponsors</h3>
+
+
+  
+    Rosehill Gardens
+    <br>
+    <a href="http://www.krivaan.com/"><img src="http://www.krivaan.com/wp-content/uploads/2012/07/Krivaan156x74.png" width="156" height="52" alt="Krivaan" /></a>
+    <br>
+    Floral Vibes
+    <br>
+
+
+<% @sponsors.each do |sponsor| %>
+  <tr>
+    <!--<td><%= link_to 'Show', sponsor %></td>-->
+    <td><%= link_to 'Edit', edit_sponsor_path(sponsor) %></td>
+    <td><%= link_to 'Destroy', sponsor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+
+<br />
+
+<%= link_to 'New Sponsor', new_sponsor_path %>
