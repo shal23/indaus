@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @enquirer.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @enquirer.email %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @enquirer.subject %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @enquirer.message %>
+</p>
+
+
+<%= link_to 'Edit', edit_enquirer_path(@enquirer) %> |
+<%= link_to 'Back', enquirers_path %>

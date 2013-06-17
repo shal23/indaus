@@ -1,0 +1,29 @@
+<h1>Listing enquirers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Subject</th>
+    <th>Message</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @enquirers.each do |enquirer| %>
+  <tr>
+    <td><%= enquirer.name %></td>
+    <td><%= enquirer.email %></td>
+    <td><%= enquirer.subject %></td>
+    <td><%= enquirer.message %></td>
+    <td><%= link_to 'Show', enquirer %></td>
+    <td><%= link_to 'Edit', edit_enquirer_path(enquirer) %></td>
+    <td><%= link_to 'Destroy', enquirer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Enquirer', new_enquirer_path %>

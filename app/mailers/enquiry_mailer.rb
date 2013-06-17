@@ -1,3 +1,11 @@
 class EnquiryMailer < ActionMailer::Base
-  default from: "from@example.com"
+
+  default from: "shalinidal@gmail.com"
+
+  def enquiry_email(enquirer)
+  	@enquirer = enquirer
+  	mail(:to => "shalinidal@gmail.com", :subject => "Enquiry")
+
+  end
+
 end

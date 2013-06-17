@@ -1,5 +1,8 @@
 Indaus::Application.routes.draw do
   
+  resources :enquirers
+
+
   get "mission/index"
   match "mission" => "mission/index"
 
