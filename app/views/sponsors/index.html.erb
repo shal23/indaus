@@ -1,16 +1,17 @@
-<h3>Our Sponsors</h3>
-
-
-    <a href="http://www.krivaan.com/"><img src="http://www.krivaan.com/wp-content/uploads/2012/07/Krivaan156x74.png" width="156" height="52" alt="Krivaan" /></a>
-    <br>
-    <br>
-    <%= image_tag "rosehill_g.png" %>
-    <br>
-    <br>
-    <%= image_tag "floral_vibes.jpg" %>
-    <br>
-    <br>
-
+<center><h3>Our Sponsors</h3></center>
+<br>
+<p>If you want to become a member/sponsor please fill the form below</p>
+<br>
+<hr>
+<br>
+<br>
+<tr>
+    <td><%= image_tag "floral_vibes.jpg", :style => "padding:10px 20px;" %></td>
+    <td> <a href="http://www.krivaan.com/"><img src="http://www.krivaan.com/wp-content/uploads/2012/07/Krivaan156x74.png" width="156" height="52" alt="Krivaan" /></a></td> 
+    <td><%= image_tag "rosehill_g.png", :style => "padding:10px 20px;" %></td> 
+    
+   
+</tr>
 
 <% @sponsors.each do |sponsor| %>
   <tr>
@@ -22,4 +23,10 @@
 
 <br />
 
-<%= link_to 'New Sponsor', new_sponsor_path %>
+<% if user_signed_in? %>
+        <% if current_user.has_role? :admin %>
+            <%= link_to 'New Sponsor', new_sponsor_path %>
+<% else %>
+            <%= link_to root_path %>
+ <% end %>
+<% end %>

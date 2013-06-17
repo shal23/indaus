@@ -11,6 +11,9 @@ Indaus::Application.routes.draw do
 
   resources :sponsors
 
+  devise_for :users
+  resources :users
+
 
     get "admin/index"
     match "admin" => "admin/index"
@@ -36,7 +39,12 @@ Indaus::Application.routes.draw do
   authenticated :user do
     root :to => 'home#index'
   end
+
+  authenticated :admin do
+    get "admin/index", :id => "admin"
+    match "admin" => "admin#index"
+  end
+
   root :to => "home#index"
-  devise_for :users
-  resources :users
+  
 end
