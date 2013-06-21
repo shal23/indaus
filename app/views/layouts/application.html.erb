@@ -5,6 +5,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Indaus" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "INDAUS" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
 
@@ -15,9 +16,17 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <!--<div class="container">-->
+    <div class="container">
       <div class="navbar navbar-static-top">
     <!--<div class="navbar navbar-fixed-top">-->
           <!--<nav class="navbar-inner">-->
@@ -26,17 +35,17 @@
             </div>
           <!--</nav>-->
       </div>
-    <!--</div>-->
+    </div>
 
-    <div id="main" role="main">
-      <div class="container">
-        <!--<div class="content">-->
-           <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-            </div>
-          </div>
+        <div id="main" role="main">
+          <div class="container">
+            
+              <div class="row">
+                <div class="span12">
+                  <%= render 'layouts/messages' %>
+                  <%= yield %>
+                </div>
+              </div>
           <footer>
             <div class="footer-border">
               <div class="row">
@@ -53,8 +62,23 @@
               </div>
             </div>
           </footer>
-        <!--</div>-->
+       
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+
   </body>
 </html>
