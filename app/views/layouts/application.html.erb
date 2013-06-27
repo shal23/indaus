@@ -5,11 +5,11 @@
     <title><%= content_for?(:title) ? yield(:title) : "INDAUS" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "INDAUS" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
     
+
     <link href="assets/site.css.scss" rel="stylesheet">
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    
      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
 
 
@@ -19,7 +19,7 @@
 
 
     
-      
+      <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
       <%= yield(:head) %>
 
@@ -29,13 +29,7 @@
       <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
 
-    <!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
-
+    
     
    
   </head>
@@ -62,37 +56,29 @@
                   <%= yield %>
                 </div>
               </div>
-          <footer>
-            <div class="footer-border">
-              <div class="row">
-                <div class="span12">
-                  <p class="pull-right">Designed by <a href="http://www.shalininirwal.com" target="_blank">Shalini</a></p>
-                  <p><span class="INDAUS">&copy; 2013 INDAUS &middot; </span>
-                    <a href="/privacy">Privacy</a> <span class="INDAUS">&middot;</span>
-                    <a href="/enquiries/new">Contact</a> <span class="INDAUS">&middot; </span>
-                    <a href="https://twitter.com/" target="_blank"><%= image_tag "twitter.png" %></a> <span class="INDAUS">&middot; </span>
-                    <a href="https://www.facebook.com/INDAUS.NSW" target="_blank"><%= image_tag "facebook.png" %></a> <span class="INDAUS">&middot; </span>
+          
+              
+                    <footer>
+                      <div class="footer-border">
+                        <div class="row">
+                          <div class="span12">
+                            <p class="pull-right">Designed by <a href="http://www.shalininirwal.com" target="_blank">Shalini</a></p>
+                            <p><span class="INDAUS">&copy; 2013 INDAUS &middot; </span>
+                              <a href="/privacy">Privacy</a> <span class="INDAUS">&middot;</span>
+                              <a href="/enquiries/new">Contact</a> <span class="INDAUS">&middot; </span>
+                              <a href="https://twitter.com/" target="_blank"><%= image_tag "twitter.png" %></a> <span class="INDAUS">&middot; </span>
+                              <a href="https://www.facebook.com/INDAUS.NSW" target="_blank"><%= image_tag "facebook.png" %></a> <span class="INDAUS">&middot; </span>
 
-                    
-                </div>
-              </div>
-            </div>
-          </footer>
-       
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
-        <script src="assets/js/jquery.js"></script>
-        <script src="assets/js/bootstrap-transition.js"></script>
-        <script src="assets/js/bootstrap-alert.js"></script>
-        <script src="assets/js/bootstrap-modal.js"></script>
-        <script src="assets/js/bootstrap-dropdown.js"></script>
-        <script src="assets/js/bootstrap-scrollspy.js"></script>
-        <script src="assets/js/bootstrap-tab.js"></script>
-        <script src="assets/js/bootstrap-tooltip.js"></script>
-        <script src="assets/js/bootstrap-popover.js"></script>
-        <script src="assets/js/bootstrap-button.js"></script>
-        <script src="assets/js/bootstrap-collapse.js"></script>
+                              
+                          </div>
+                        </div>
+                      </div>
+                    </footer>
+          </div> <!--! end of .container -->
+        </div> <!--! end of #main -->
+          
+        <script src="assets/js/jquery.js"></script>  
         <script src="assets/js/bootstrap-carousel.js"></script>
-        <script src="assets/js/bootstrap-typeahead.js"></script>
+        
   </body>
 </html>
